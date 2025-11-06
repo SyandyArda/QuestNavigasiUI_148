@@ -10,6 +10,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.praktikum5.view.FormIsian
+import com.example.praktikum5.view.TampilData
 
 enum class Navigasi {
     Formulirku,
@@ -29,7 +30,16 @@ fun DataApp(
             modifier = Modifier.padding(isiRuang)){
             composable(route = Navigasi.Formulirku.name){
                 FormIsian (
-
+                    OnSubmitBtnClick = {
+                        navController.navigate(Navigasi.Detail.name)
+                    }
+                )
+            }
+            composable(route = Navigasi.Detail.name){
+                TampilData (
+                    onBackBtnClick = {
+                        cancelAndBackToFormulirku(navController)
+                    }
                 )
             }
         }
