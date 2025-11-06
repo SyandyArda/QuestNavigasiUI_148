@@ -33,10 +33,10 @@ fun TampilData(
     val items = listOf(
         Pair(first = stringResource(id = R.string.nama_lengkap), second = "Contoh Nama"),
         Pair(first = stringResource(id = R.string.jenis_kelamin), second = "Lainnya"),
-        Pair(first = stringResource(id = "ALAMAT"), second = "Yogyakarta")
+        Pair(first = stringResource(id = R.string.alamat), second = "Yogyakarta")
     )
     Scaffold (modifier = Modifier,
-        {
+        topBar = {
             TopAppBar(
                 title = {
                     Text(
