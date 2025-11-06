@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.DividerDefaults.Thickness
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
@@ -45,7 +46,7 @@ fun FormIsian(
                 singleLine = true,
                 modifier = Modifier
                     .padding(top = 20.dp)
-                    .width(width = 250.dp)
+                    .width(width = 250.dp),
                 label = {Text(text = "Nama Lengkap")},
                 onValueChange = {}
             )
@@ -61,9 +62,13 @@ fun FormIsian(
                             selected = false,
                             onClick = {item}
                         )
+                        Text(text = item)
                     }
                 }
             }
+            HorizontalDivider(modifier = Modifier
+                .padding(all = 20.dp)
+                .width(width = 259.dp),
             )
         }
     }
