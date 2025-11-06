@@ -1,8 +1,11 @@
 package com.example.praktikum5.view
 
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 
 @Composable
 fun FormIsian(
@@ -12,7 +15,10 @@ fun FormIsian(
     Scaffold (modifier= Modifier,
         topBar={
             TopAppBar(
-                title
+                title = {Text(text= stringResource(id= R.string.home),
+                    color = Color.White)},
+                colors = TopAppBarDefaults.topAppBarColors
+                    (colorResource(id = R.color.teal_700))
             )
         })
 }
